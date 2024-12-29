@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model pets {
+  id          Int      @id @default(autoincrement())
+  name        String?  @db.VarChar(255)
+  category    String   @db.VarChar(50)
+  subcategory String   @db.VarChar(50)
+  price       Decimal? @db.Money
+  description String?
+  vaccinated  Boolean?
+  image_url   String?
+}
