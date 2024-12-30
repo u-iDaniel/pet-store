@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 60px;
+  position: sticky;
+
+  h1 {
+    font-size: 40px;
+    color: #252B42;
+    margin-right: 50px;
+  }
+
+  a {
+
+    text-decoration: none;
+  }
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  li {
+    list-style-type: none;
+  }
+  margin-top: 4px;
+}
+
+nav ul.left li {
+  color: #737373;
+}
+
+nav ul.right {
+  color: #23A6F0;
+  margin-left: auto;
+}
