@@ -11,6 +11,7 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -20,7 +21,12 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 4em;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: 500;
 }

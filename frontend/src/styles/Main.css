@@ -1,0 +1,43 @@
+div.background {
+  height: calc(100vh - 91px);
+  display: flex;
+  
+  .left {
+    background-image: url('/background.png');
+    background-repeat: no-repeat;
+    flex: 2;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .right {
+    background-image: url('/girl-with-dog.png');
+    background-repeat: no-repeat;
+    flex: 1;
+    background-size: cover;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 65%;
+    width: 40%;
+    color: white;
+    margin-left: 150px;
+    
+    a {
+      width: fit-content;
+      color: white;
+      font-size: 0.875em;
+      font-weight: bold;
+      text-decoration: none;
+      border: 1px solid white;
+      border-radius: 4px;
+      padding: 15px 40px;
+      text-transform: uppercase;
+    }
+  }
+}

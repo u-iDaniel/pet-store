@@ -1,9 +1,9 @@
-import App from "@pages/App.tsx"
+import Home from "@pages/Home"
 
 const routes = [
     {
         path: "/",
-        element: <App />,
+        element: <Home />,
     },
 ];
 
