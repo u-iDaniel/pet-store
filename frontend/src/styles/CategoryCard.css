@@ -9,18 +9,14 @@ div.category-card {
     object-fit: cover;
   }
 
-  .text {
+  .category-card-text {
     padding: 0 15px;
     text-align: center;
-    color: black;
+    color: var(--text-color);
 
     h3 {
-      color: #23A6F0;
+      color: var(--primary-color);
       margin: 14px 0;
-    }
-    
-    p {
-      font-size: 14px;
     }
   }
 }

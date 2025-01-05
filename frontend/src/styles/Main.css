@@ -1,5 +1,5 @@
 div.background {
-  height: calc(100vh - 91px);
+  min-height: calc(100vh - 91px);
   display: flex;
   
   .left {
@@ -23,7 +23,6 @@ div.background {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    height: 65%;
     width: 40%;
     color: white;
     margin-left: 150px;
@@ -33,7 +32,6 @@ div.background {
       color: white;
       font-size: 0.875em;
       font-weight: bold;
-      text-decoration: none;
       border: 1px solid white;
       border-radius: 4px;
       padding: 15px 40px;

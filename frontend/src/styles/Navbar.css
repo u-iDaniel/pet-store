@@ -9,14 +9,8 @@ nav {
   height: 91px;
 
   h1 {
-    font-size: 2.5em;
-    color: #252B42;
+    color: var(--text-color);
     margin-right: 50px;
-  }
-
-  a {
-
-    text-decoration: none;
   }
 }
 
@@ -32,10 +26,10 @@ nav ul {
 }
 
 nav ul.left li {
-  color: #737373;
+  color: var(--second-text-color);
 }
 
 nav ul.right {
-  color: #23A6F0;
+  color: var(--primary-color);
   margin-left: auto;
 }

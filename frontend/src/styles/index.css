@@ -1,6 +1,12 @@
 :root {
   font-family: "Montserrat", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: white;
+  --primary-color: #23A6F0;
+  --text-color: #252B42;
+  --second-text-color: #737373;
+  --price-color: #23856D;
+  --success-color: #2DC071;
+  --removal-color: #B00000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,16 +27,34 @@ body {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: clamp(1.875rem, 1.4402rem + 2.1739vw, 4.375rem);
   font-weight: 800;
   line-height: 1.5;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.5rem);
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: clamp(1rem, 0.9652rem + 0.1739vw, 1.2rem);
   font-weight: 500;
+}
+
+p {
+  font-size: clamp(0.875rem, 0.8533rem + 0.1087vw, 1rem);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
