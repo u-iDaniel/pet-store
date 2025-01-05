@@ -1,0 +1,10 @@
+div.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 15em);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}

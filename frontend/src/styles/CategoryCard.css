@@ -1,0 +1,27 @@
+div.category-card {
+  box-shadow: -1px 4px 4px rgba(0, 0, 0, 25%);
+  min-height: 400px;
+  margin-bottom: 2em;
+
+  img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+
+  .text {
+    padding: 0 15px;
+    text-align: center;
+    color: black;
+
+    h3 {
+      color: #23A6F0;
+      margin: 14px 0;
+    }
+    
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
