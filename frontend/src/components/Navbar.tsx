@@ -1,16 +1,22 @@
 import '@styles/Navbar.css'
 import { Link } from 'react-router-dom';
+import Dropdown from './Dropdown';
 
 const Navbar = () => {
   const numItems = 1;
-
 
   return (
     <nav>
       <Link to={"/"}><h1>Pet Store</h1></Link>
       <ul className='left'>
         <Link to={"/"}><li>Home</li></Link>
-        <li>Shop</li>
+        <li>
+          <Dropdown name='Shop'>
+            <Link to={"/shop/cats"}>Cats</Link>
+            <Link to={"/shop/dogs"}>Dogs</Link>
+            <Link to={"/shop/birds"}>Birds</Link>
+          </Dropdown>
+        </li>
       </ul>
       <ul className='right'>
         <li>
