@@ -1,4 +1,5 @@
 import Home from "@pages/Home"
+import Products from "@pages/Products";
 import Shop from "@pages/Shop";
 
 const routes = [
@@ -9,6 +10,10 @@ const routes = [
     {
         path: "/shop",
         element: <Shop/>
+    },
+    {
+        path: "/shop/:category",
+        element: <Products />
     }
 ];
 
