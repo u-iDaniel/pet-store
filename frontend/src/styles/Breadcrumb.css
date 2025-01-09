@@ -1,0 +1,9 @@
+div.breadcrumb {
+  a {
+    color: var(--primary-color);
+  }
+
+  h4 {
+    display: inline-block;
+  }
+}

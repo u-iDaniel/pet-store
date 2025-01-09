@@ -1,6 +1,15 @@
+div.shop {
+  margin-top: 20px;
+
+  .breadcrumb {
+    margin-left: 30px;
+  }
+}
+
 div.container {
   display: grid;
   grid-template-columns: repeat(auto-fit, 15em);
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 80px;
 }
