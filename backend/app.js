@@ -1,8 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const { PrismaClient } = require('@prisma/client');
 
 const app = express();
 const prisma = new PrismaClient();
+
+app.use(cors({
+  origin: ["http://localhost:5173"],
+}));
 
 app.get('/api/pets', async (req, res) => {
   const pets = await prisma.pets.findMany();
