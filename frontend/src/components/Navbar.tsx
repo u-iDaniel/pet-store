@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
 
 const Navbar = () => {
-  const numItems = 1;
+  const numItems = 1; // TODO: make state tracking cart items
 
   return (
     <nav>

@@ -1,4 +1,3 @@
-// import { useEffect } from 'react';
 import Breadcrumb from '@components/Breadcrumb';
 import CategoryCard from '@components/CategoryCard';
 import Navbar from '@components/Navbar';
@@ -17,8 +16,6 @@ const birdDesc = `
 `
 
 const Shop = () => {
-
-  // useEffect
   return (
     <>
       <Navbar />

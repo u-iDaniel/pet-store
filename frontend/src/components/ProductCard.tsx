@@ -31,7 +31,6 @@ const ProductCard:FC<ProductCardProps> = ({ pet }) => {
         <p className='price'>${pet.price}</p>
         <button>Add to Cart</button>
       </div>
-      
     </div>
   )
 }

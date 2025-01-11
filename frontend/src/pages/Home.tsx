@@ -3,7 +3,6 @@ import '@styles/Main.css'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-
   return (
     <>
       <Navbar />
