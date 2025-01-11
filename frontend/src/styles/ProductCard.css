@@ -1,0 +1,54 @@
+div.product-card {
+  box-shadow: -1px 4px 4px rgba(0, 0, 0, 25%);
+  margin-bottom: 2em;
+
+  img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+  }
+
+  div.content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 15px 35px 35px;
+
+    h3 {
+      color: var(--primary-color);
+      text-align: center;
+    }
+
+    h4 {
+      color: var(text-color);
+    }
+
+    .desc,
+    .vaccinated {
+      color: var(--second-text-color);
+    }
+
+    .vaccinated {
+      display: flex;
+      align-items: center;
+    }
+
+    .price {
+      color: var(--price-color);
+      font-size: 1.125em;
+      font-weight: bold;
+    }
+
+    
+  }
+  
+  button {
+    width: fit-content;
+    background-color: var(--primary-color);
+    border-radius: 32px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    margin-top: auto;
+  }
+}

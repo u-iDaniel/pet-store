@@ -1,0 +1,16 @@
+div.info-bar {
+  display: flex;
+  /* margin-top: 1em; */
+  padding: 2em;
+  
+  .results {
+    margin-left: auto;
+  }
+}
+
+div.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.875em, 1fr));
+  gap: 45px;
+  padding: 30px 100px;
+}

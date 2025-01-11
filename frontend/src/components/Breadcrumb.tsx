@@ -7,7 +7,7 @@ const Breadcrumb = () => {
   const paths = pathname
   .split("/")
   .slice(1)
-  .filter((val) => !!val) // filter empty strings
+  .filter((val) => !!val) // filter out empty strings
   .map((val, idx, arr) => { // get appropriate path for each subpath
     if (idx > 0) {
       let acc = '';
@@ -28,7 +28,7 @@ const Breadcrumb = () => {
       {paths.map((link, idx) => {
         const name = link.split("/").pop();
         if (idx == paths.length - 1) {
-          return <h4>{name![0].toLocaleUpperCase() + name!.slice(1)}</h4>
+          return <h4 key={idx}>{name![0].toLocaleUpperCase() + name!.slice(1)}</h4>
         }
 
         return ( 
