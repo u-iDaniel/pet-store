@@ -22,7 +22,7 @@ app.get('/api/pets/:category', async (req, res) => {
   const pets = await prisma.pets.findMany({
     where: {category: category},
   });
-  return res.json(pets);
+  return pets.length > 0 ? res.json(pets) : res.status(404).json({ error: 'Category not found' });
 });
 
 app.listen(process.env.PORT, () => console.log(`Listening on PORT ${process.env.PORT}`));
