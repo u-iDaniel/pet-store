@@ -1,8 +1,9 @@
 import {FC, ReactNode, useState } from "react";
 import { CartContext } from "./CartContext";
+import { Pets } from "./types";
 
 const CartProvider:FC<{ children: ReactNode }> = ({ children }) => {
-  const [cart, setCart] = useState<{[petId: number] : boolean} >({});
+  const [cart, setCart] = useState<Pets[]>([]);
 
   return (
     <CartContext.Provider value={{cart, setCart}}>

@@ -1,12 +1,13 @@
 import { createContext, Dispatch, SetStateAction, useContext} from "react";
+import { Pets } from "./types";
 
 interface CartContextType {
-  cart: {[petId: number] : boolean};
-  setCart: Dispatch<SetStateAction<{[petId: number] : boolean}>>;
+  cart: Pets[];
+  setCart: Dispatch<SetStateAction<Pets[]>>;
 }
 
 export const CartContext = createContext<CartContextType>({
-  cart: {},
+  cart: [],
   setCart: () => null,
 });
 

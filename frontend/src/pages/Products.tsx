@@ -16,12 +16,13 @@ const Products = () => {
   const [pets, setPets] = useState<Pets[]>([]);
   const {cart, setCart} = useCart();
 
-  function handleAddToCart(petId : number) {
-    setCart({...cart, [petId]: true}); // the new petId key overrides the old petId key if it existed 
+  function handleAddToCart(pet: Pets) {
+    setCart([...cart, pet]);
   }
   
-  function handleRemoveFromCart(petId : number) {
-    setCart({...cart, [petId]: false});
+  function handleRemoveFromCart(petId: number) {
+    const newCart = cart.filter((pet) => pet.id !== petId);
+    setCart(newCart);
   }
 
   // Call backend API
@@ -48,8 +49,8 @@ const Products = () => {
         {pets.map((pet) => 
           <ProductCard
             pet={pet}
-            inCart={!!cart[pet.id]} 
-            onAddToCart={() => handleAddToCart(pet.id)} 
+            inCart={cart.filter(_pet => _pet.id == pet.id).length == 1} // workaround since JS no likey compare objs if they're not variables (somewhat similar to structs in C)
+            onAddToCart={() => handleAddToCart(pet)} 
             onRemoveFromCart={() => handleRemoveFromCart(pet.id)}
             key={pet.id}
           />
