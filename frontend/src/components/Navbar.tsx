@@ -1,10 +1,9 @@
 import '@styles/Navbar.css'
 import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
+import Cart from './Cart';
 
 const Navbar = () => {
-  const numItems = 1; // TODO: make state tracking cart items
-
   return (
     <nav>
       <Link to={"/"}><h1>Pet Store</h1></Link>
@@ -26,7 +25,7 @@ const Navbar = () => {
           Login/Register
         </li>
         <li>Search</li>
-        <li>Cart ({numItems})</li>
+        <li><Cart /></li>
       </ul>
     </nav>
   )

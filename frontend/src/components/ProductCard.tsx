@@ -7,6 +7,7 @@ interface ProductCardProps {
   pet: Pets;
   inCart: boolean;
   onAddToCart: () => void;
+  // Change all signs of this to onRemoveFromCart
   onRemoveToCart: () => void;
 }
 

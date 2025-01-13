@@ -58,3 +58,15 @@ button {
   cursor: pointer;
   font-family: inherit;
 }
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.second-text-color {
+  color: var(--second-text-color);
+}
