@@ -1,12 +1,21 @@
 import '@styles/ProductCard.css'
 import { FC } from 'react';
 import { Pets } from 'src/types';
+import CartButton from '@components/CartButton';
 
 interface ProductCardProps {
   pet: Pets;
+  inCart: boolean;
+  onAddToCart: () => void;
+  onRemoveToCart: () => void;
 }
 
-const ProductCard:FC<ProductCardProps> = ({ pet }) => {
+const ProductCard:FC<ProductCardProps> = ({ 
+  pet,
+  inCart,
+  onAddToCart,
+  onRemoveToCart,
+}) => {
   return (
     <div className="product-card">
       <img src={pet.image_url!} alt={pet.name!} />
@@ -22,14 +31,14 @@ const ProductCard:FC<ProductCardProps> = ({ pet }) => {
             </svg>
             : 
             <svg aria-label="Not" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 5L5 15M5 5L15 15" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 5L5 15M5 5L15 15" stroke="#1E1E1E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           }
           &nbsp; 
           Vaccinated
         </p>
         <p className='price'>${pet.price}</p>
-        <button>Add to Cart</button>
+        <CartButton inCart={inCart} onAddToCart={onAddToCart} onRemoveToCart={onRemoveToCart}  />
       </div>
     </div>
   )

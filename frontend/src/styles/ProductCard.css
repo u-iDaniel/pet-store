@@ -40,14 +40,4 @@ div.product-card {
     }
 
   }
-  
-  button {
-    width: fit-content;
-    background-color: var(--primary-color);
-    border-radius: 32px;
-    padding: 10px 20px;
-    color: white;
-    font-weight: bold;
-    margin-top: auto;
-  }
 }

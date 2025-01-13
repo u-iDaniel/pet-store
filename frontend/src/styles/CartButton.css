@@ -1,0 +1,26 @@
+button.add,
+button.remove,
+button.added {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: fit-content;
+  border-radius: 32px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 0.875em;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button.add {
+  background-color: var(--primary-color);
+}
+
+button.added {
+  background-color: var(--success-color);
+}
+
+button.remove {
+  background-color: var(--removal-color);
+}
