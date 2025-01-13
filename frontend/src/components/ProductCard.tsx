@@ -7,15 +7,14 @@ interface ProductCardProps {
   pet: Pets;
   inCart: boolean;
   onAddToCart: () => void;
-  // Change all signs of this to onRemoveFromCart
-  onRemoveToCart: () => void;
+  onRemoveFromCart: () => void;
 }
 
 const ProductCard:FC<ProductCardProps> = ({ 
   pet,
   inCart,
   onAddToCart,
-  onRemoveToCart,
+  onRemoveFromCart: onRemoveFromCart,
 }) => {
   return (
     <div className="product-card">
@@ -39,7 +38,7 @@ const ProductCard:FC<ProductCardProps> = ({
           Vaccinated
         </p>
         <p className='price'>${pet.price}</p>
-        <CartButton inCart={inCart} onAddToCart={onAddToCart} onRemoveToCart={onRemoveToCart}  />
+        <CartButton inCart={inCart} onAddToCart={onAddToCart} onRemoveFromCart={onRemoveFromCart}  />
       </div>
     </div>
   )

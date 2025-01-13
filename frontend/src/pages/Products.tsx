@@ -50,7 +50,7 @@ const Products = () => {
             pet={pet}
             inCart={!!cart[pet.id]} 
             onAddToCart={() => handleAddToCart(pet.id)} 
-            onRemoveToCart={() => handleRemoveFromCart(pet.id)}
+            onRemoveFromCart={() => handleRemoveFromCart(pet.id)}
             key={pet.id}
           />
         )}

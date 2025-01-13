@@ -4,7 +4,7 @@ import { FC, useState } from 'react';
 interface CartButtonProps {
   inCart: boolean;
   onAddToCart: () => void;
-  onRemoveToCart: () => void;
+  onRemoveFromCart: () => void;
 }
 
 const CartButton:FC<CartButtonProps> = (props) => {
@@ -16,7 +16,7 @@ const CartButton:FC<CartButtonProps> = (props) => {
   }
 
   function handleRemove() {
-    props.onRemoveToCart();
+    props.onRemoveFromCart();
     setFirstTime(true);
     setInTransition(false);
   }
