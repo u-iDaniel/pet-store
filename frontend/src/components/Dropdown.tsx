@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode, useEffect, useRef, useState } from "react";
 import '@styles/Dropdown.css'
 
 interface DropdownProps {
@@ -7,15 +7,35 @@ interface DropdownProps {
 }
 
 const Dropdown: FC<DropdownProps> = (props) => {
-  // TODO: Add ref to close dropdown menu when user clicks outside of dropdown
   const [show, setShow] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
-    setShow((show) => !show);
+    setShow(!show);
   }
 
+  const handleClickOutside = (e: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      setShow(false);
+    }
+  }
+
+  // Set up event listeners to check if user clicked outside
+  // This component basically never dismounts so we need to check the state
+  useEffect(() => {
+    if (show) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+  });
+
   return (
-    <div className="dropdown">
+    <div ref={dropdownRef} className="dropdown">
       <button onClick={toggleMenu}>
         { props.name } <>&nbsp;</>
         <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
