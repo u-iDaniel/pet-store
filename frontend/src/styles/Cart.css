@@ -5,6 +5,8 @@ div.drawer {
   top: 0;
   right: 0;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   padding: 15px;
 
@@ -12,11 +14,35 @@ div.drawer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-transform: uppercase;
 
     button {
       display: flex;
       align-items: center;
     }
+  }
+}
+
+div.cart-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px 12px;
+  overflow-y: auto;
+}
+
+div.checkout {
+  margin-top: auto;
+  padding: 10px;
+
+  button {
+    display: flex;
+    align-items: center;
+    padding: 15px 45px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.33em;
+    font-weight: bold;
   }
 }
 

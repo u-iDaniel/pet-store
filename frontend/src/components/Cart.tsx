@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { useCart } from '../CartContext';
 import '@styles/Cart.css'
+import CartItem from './CartItem';
 
 const Cart = () => {
   const [showDrawer, setShowDrawer] = useState(false);
   const {cart} = useCart();
-  const numItems = Object.values(cart).filter(inCart => inCart).length;
+  const numItems = cart.length;
 
   function toggleDrawer() {
     setShowDrawer(!showDrawer);
   }
 
-  // TODO: Make sure when you click off the cart drawer it will close the drawer
   return (
     <>
       <button onClick={toggleDrawer}>Cart ({numItems})</button>
@@ -27,17 +27,18 @@ const Cart = () => {
                 </svg>
               </button>
             </div>
+            
             <div className="cart-contents">
-
+              {cart.map((pet) => <CartItem pet={pet} key={pet.id} />)}
             </div>
 
             <div className="checkout">
-              <h3><span className='primary-color'>Subtotal: </span><span className='text-color'>$1234</span></h3>
-              <button className='primary-color'>Checkout Now</button>
+              <h3>Subtotal: <span className='text-color'>${cart.reduce((acc, pet) => acc + +pet.price!, 0)}</span></h3>
+              <button>Checkout Now</button>
             </div>
           </div>
           
-          <div className={`overlay ${showDrawer ? 'visible' : ''}`}></div>
+          <div onClick={toggleDrawer} className={`overlay ${showDrawer ? 'visible' : ''}`}></div>
         </>}
     </>
   )
