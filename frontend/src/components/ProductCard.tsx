@@ -1,7 +1,7 @@
 import '@styles/ProductCard.css'
 import { FC } from 'react';
 import { Pets } from 'src/types';
-import CartButton from '@components/CartButton';
+import AddToCartButton from '@components/AddToCartButton';
 
 interface ProductCardProps {
   pet: Pets;
@@ -14,7 +14,7 @@ const ProductCard:FC<ProductCardProps> = ({
   pet,
   inCart,
   onAddToCart,
-  onRemoveFromCart: onRemoveFromCart,
+  onRemoveFromCart,
 }) => {
   return (
     <div className="product-card">
@@ -38,7 +38,7 @@ const ProductCard:FC<ProductCardProps> = ({
           Vaccinated
         </p>
         <p className='price'>${pet.price}</p>
-        <CartButton inCart={inCart} onAddToCart={onAddToCart} onRemoveFromCart={onRemoveFromCart}  />
+        <AddToCartButton inCart={inCart} onAddToCart={onAddToCart} onRemoveFromCart={onRemoveFromCart}  />
       </div>
     </div>
   )

@@ -1,6 +1,5 @@
 div.info-bar {
   display: flex;
-  /* margin-top: 1em; */
   padding: 2em;
   
   .results {

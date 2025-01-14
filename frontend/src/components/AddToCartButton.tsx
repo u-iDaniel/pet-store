@@ -1,4 +1,4 @@
-import '@styles/CartButton.css'
+import '@styles/AddToCartButton.css'
 import { FC, useState } from 'react';
 
 interface CartButtonProps {
