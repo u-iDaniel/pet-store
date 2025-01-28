@@ -5,8 +5,12 @@ const { PrismaClient } = require('@prisma/client');
 const app = express();
 const prisma = new PrismaClient();
 
+const allowedOrigins = process.env.NODE_ENV === "production"
+? ["https://pet-store-nine.vercel.app"]
+: ["http://localhost:5173", "http://127.0.0.1:5173"];
+
 app.use(cors({
-  origin: ["http://localhost:5173", "http://127.0.0.1:5173"],
+  origin: allowedOrigins,
 }));
 
 app.get('/api/pets', async (req, res) => {
