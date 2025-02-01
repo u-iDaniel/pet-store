@@ -36,7 +36,7 @@ CREATE TABLE public.pets (
 );
 
 
-ALTER TABLE public.pets OWNER TO koyeb-adm;
+ALTER TABLE public.pets OWNER TO postgres;
 
 --
 -- Name: pets_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
